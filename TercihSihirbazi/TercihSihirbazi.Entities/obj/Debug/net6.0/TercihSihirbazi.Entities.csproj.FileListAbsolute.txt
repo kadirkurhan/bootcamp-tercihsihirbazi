@@ -1,0 +1,14 @@
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\bin\Debug\net6.0\TercihSihirbazi.Entities.deps.json
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\bin\Debug\net6.0\TercihSihirbazi.Entities.runtimeconfig.json
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\bin\Debug\net6.0\TercihSihirbazi.Entities.dll
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\bin\Debug\net6.0\TercihSihirbazi.Entities.pdb
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.csproj.AssemblyReference.cache
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.AssemblyInfoInputs.cache
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.AssemblyInfo.cs
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.csproj.CoreCompileInputs.cache
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.dll
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\refint\TercihSihirbazi.Entities.dll
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.pdb
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\TercihSihirbazi.Entities.genruntimeconfig.cache
+D:\netCoreuygulamalarım\minimalapiExcelParser\katmanlımimari\TercihSihirbazi\TercihSihirbazi.Entities\obj\Debug\net6.0\ref\TercihSihirbazi.Entities.dll

@@ -1,0 +1,326 @@
+﻿++Solution 'TercihSihirbazi' ‎(4 of 4 projects)
+++TercihSihirbazi.API
+i:{00000000-0000-0000-0000-000000000000}:TercihSihirbazi.API
+++Connected Services 
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>407
+++Dependencies
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>406
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>179
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>124
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>67
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:>899
+++Properties
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\properties\
+++launchSettings.json
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\properties\launchsettings.json
+++Controllers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\controllers\
+++AuthController.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\controllers\authcontroller.cs
+++ProductsController.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\controllers\productscontroller.cs
+++WeatherForecastController.cs
+++CustomFilters
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\customfilters\
+++Mapping
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\mapping\
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\mapping\
+++appsettings.json
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\appsettings.json
+++Program.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\program.cs
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.excelparser\program.cs
+++WeatherForecast.cs
+++No service dependencies discovered
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>408
+++Analyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:analyzers
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:analyzers
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:analyzers
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:analyzers
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:analyzers
+++Frameworks
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:frameworks
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:frameworks
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:frameworks
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:frameworks
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:frameworks
+++Packages
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:packages
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:packages
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:packages
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:packages
+++Projects
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:projects
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:projects
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:projects
+++ValidId.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\customfilters\validid.cs
+++ValidModel.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\customfilters\validmodel.cs
+++AutoMapperProfile
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\mapping\automapperprofile\
+++appsettings.Development.json
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.8\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.8\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.8\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\users\user\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.8\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.8\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\sdk\6.0.303\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.8\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.8\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.8\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.8\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.8\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\microsoft.netcore.app
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\microsoft.netcore.app
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\microsoft.netcore.app
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\microsoft.netcore.app
+i:{83ad4973-5005-4d96-b1ef-eeb40d40e82d}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.excelparser\microsoft.netcore.app
+++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>680
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>677
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>679
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>675
+++FluentValidation.AspNetCore (11.2.1)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>684
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>682
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>683
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>681
+++Microsoft.AspNetCore.Authentication.JwtBearer (6.0.8)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>697
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>695
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>696
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>694
+++Microsoft.EntityFrameworkCore (6.0.8)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>701
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>699
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>700
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>698
+++Microsoft.EntityFrameworkCore.Design (6.0.8)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>709
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>707
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>708
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>706
+++Microsoft.EntityFrameworkCore.Tools (6.0.8)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>713
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>711
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>712
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>710
+++Npgsql.EntityFrameworkCore.PostgreSQL (6.0.6)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>721
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>719
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>720
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>718
+++Swashbuckle.AspNetCore (6.2.3)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>467
+++System.IdentityModel.Tokens.Jwt (6.22.0)
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:>717
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:>715
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:>716
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:>714
+++TercihSihirbazi.Business
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\tercihsihirbazi.business.csproj
+i:{00000000-0000-0000-0000-000000000000}:TercihSihirbazi.Business
+++TercihSihirbazi.Data
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\tercihsihirbazi.data.csproj
+i:{00000000-0000-0000-0000-000000000000}:TercihSihirbazi.Data
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\tercihsihirbazi.data.csproj
+++TercihSihirbazi.Entities
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\tercihsihirbazi.entities.csproj
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\tercihsihirbazi.entities.csproj
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\tercihsihirbazi.entities.csproj
+i:{00000000-0000-0000-0000-000000000000}:TercihSihirbazi.Entities
+++MapProfile.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\mapping\automapperprofile\mapprofile.cs
+++Concrete
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\concrete\
+++EntityFrameworkCore
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\
+++Context
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\context\
+++TercihSihirbaziContext.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\context\tercihsihirbazicontext.cs
+++Repositories
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\repositories\
+++Interfaces
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\interfaces\
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\interfaces\
+++Migrations
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\migrations\
+++20220821222647_initalcreate.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\migrations\20220821222647_initalcreate.cs
+++TercihSihirbaziContextModelSnapshot.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\migrations\tercihsihirbazicontextmodelsnapshot.cs
+++AppRoleMap.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\mapping\approlemap.cs
+++AppUserMap.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\mapping\appusermap.cs
+++AppUserRoleMap.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\mapping\appuserrolemap.cs
+++ProductMap.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\mapping\productmap.cs
+++EfAppRoleRepository.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\repositories\efapprolerepository.cs
+++EfAppUserRepository.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\repositories\efappuserrepository.cs
+++EfAppUserRoleRepository.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\repositories\efappuserrolerepository.cs
+++EfGenericRepository.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\repositories\efgenericrepository.cs
+++EfProductRepository.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\concrete\entityframeworkcore\repositories\efproductrepository.cs
+++IAppRoleDal.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\interfaces\iapproledal.cs
+++IAppUserDal.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\interfaces\iappuserdal.cs
+++IAppUserRoleDal.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\interfaces\iappuserroledal.cs
+++IGenericDal.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\interfaces\igenericdal.cs
+++IProductDal.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\interfaces\iproductdal.cs
+++20220821222647_initalcreate.Designer.cs
+i:{d66bf638-e146-4fd4-830b-d2d570a19d87}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.data\migrations\20220821222647_initalcreate.designer.cs
+++Containers
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\containers\
+++StringInfos
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\stringinfos\
+++ValidationRules
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\validationrules\
+++AppRoleManager.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\approlemanager.cs
+++AppUserManager.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\appusermanager.cs
+++AppUserRoleManager.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\appuserrolemanager.cs
+++GenericManager.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\genericmanager.cs
+++JwtManager.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\jwtmanager.cs
+++ProductManager.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\concrete\productmanager.cs
+++MicrosoftIoc
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\containers\microsoftioc\
+++IAppRoleService.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\iapproleservice.cs
+++IAppUserRoleService.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\iappuserroleservice.cs
+++IAppUserService.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\iappuserservice.cs
+++IGenericService.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\igenericservice.cs
+++IJwtService.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\ijwtservice.cs
+++IProductService.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\interfaces\iproductservice.cs
+++JwtInfo.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\stringinfos\jwtinfo.cs
+++RoleInfo.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\stringinfos\roleinfo.cs
+++FluentValidation
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\validationrules\fluentvalidation\
+++CustomExtension.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\containers\microsoftioc\customextension.cs
+++AppUserAddDtoValidator.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\validationrules\fluentvalidation\appuseradddtovalidator.cs
+++AppUserLoginDtoValidator.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\validationrules\fluentvalidation\appuserlogindtovalidator.cs
+++ProductAddDtoValidator.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\validationrules\fluentvalidation\productadddtovalidator.cs
+++ProductUpdateDtoValidator.cs
+i:{aeff5a9a-c0a4-4aa3-8420-ce610b986c73}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.business\validationrules\fluentvalidation\productupdatedtovalidator.cs
+++AppRole.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\concrete\approle.cs
+++AppUser.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\concrete\appuser.cs
+++AppUserRole.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\concrete\appuserrole.cs
+++Product.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\concrete\product.cs
+++Dtos
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\
+++AppUserDtos
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\appuserdtos\
+++AppUserAddDto.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\appuserdtos\appuseradddto.cs
+++AppUserDto.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\appuserdtos\appuserdto.cs
+++AppUserLoginDto.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\appuserdtos\appuserlogindto.cs
+++ProductDtos
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\productdtos\
+++ProductAddDto.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\productdtos\productadddto.cs
+++ProductUpdateDto.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\dtos\productdtos\productupdatedto.cs
+++IDto.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\interfaces\idto.cs
+++ITable.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\interfaces\itable.cs
+++IToken.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\interfaces\itoken.cs
+++Token
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\token\
+++JwtAccessToken.cs
+i:{3c5d37d2-4df4-407d-b9af-e0eb4461a848}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.entities\token\jwtaccesstoken.cs
+++Script Documents
+++index.html
+++swagger-ui-bundle.js
+++swagger-ui-standalone-preset.js
+++aspnetcore-browser-refresh.js
+++browserLink
+++VM5
+++NewFolder
+++InitialMigrate
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\initialmigrate\
+++JwtIdentityInitializer.cs
+i:{3fe2f41e-31ff-4a55-9e12-7afa55f174e4}:d:\netcoreuygulamalarım\minimalapiexcelparser\katmanlımimari\tercihsihirbazi\tercihsihirbazi.api\initialmigrate\jwtidentityinitializer.cs
+++Solution 'TercihSihirbazi' ‎(5 of 5 projects)
+i:{00000000-0000-0000-0000-000000000000}:TercihSihirbazi.sln
+++TercihSihirbazi.ExcelParser
+i:{00000000-0000-0000-0000-000000000000}:TercihSihirbazi.ExcelParser
