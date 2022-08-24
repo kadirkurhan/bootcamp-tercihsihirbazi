@@ -16,7 +16,15 @@ builder.Services.AddControllers().AddFluentValidation(); ;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.WithOrigins("http://localhost").AllowAnyHeader()
+                                                  .AllowAnyMethod();
+        });
+});
 builder.Services.AddDependencies();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
@@ -45,15 +53,15 @@ IWebHostEnvironment environment = builder.Environment;
 //var appRoleService = builder.Configuration.Get<AppRoleManager>();
 //var appUserRoleService = builder.Configuration.Get<AppUserRoleManager>();
 
-  //var appUserService = new ServiceCollection()
-  //  .AddScoped<IAppUserService>()
-  //  .BuildServiceProvider();
-  //var appUserRoleService = new ServiceCollection()
-  //  .AddScoped<IAppUserRoleService>()
-  //  .BuildServiceProvider();
-  //var appRoleService = new ServiceCollection()
-  //  .AddScoped<IAppRoleService>()
-  //  .BuildServiceProvider();
+//var appUserService = new ServiceCollection()
+//  .AddScoped<IAppUserService>()
+//  .BuildServiceProvider();
+//var appUserRoleService = new ServiceCollection()
+//  .AddScoped<IAppUserRoleService>()
+//  .BuildServiceProvider();
+//var appRoleService = new ServiceCollection()
+//  .AddScoped<IAppRoleService>()
+//  .BuildServiceProvider();
 
 void SeedDatabase() //can be placed at the very bottom under app.Run()
 {
@@ -76,12 +84,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(
         c =>
         {
-           // c.SwaggerEndpoint("/swagger/index.html", "V1 Docs");
+            // c.SwaggerEndpoint("/swagger/index.html", "V1 Docs");
         }
         );
 }
 
-
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();
