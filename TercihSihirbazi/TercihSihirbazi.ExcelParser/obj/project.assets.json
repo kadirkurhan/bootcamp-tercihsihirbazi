@@ -1323,37 +1323,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "/Users/kadirkurhan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.ExcelParser\\TercihSihirbazi.ExcelParser.csproj",
+      "projectUniqueName": "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.ExcelParser/TercihSihirbazi.ExcelParser.csproj",
       "projectName": "TercihSihirbazi.ExcelParser",
-      "projectPath": "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.ExcelParser\\TercihSihirbazi.ExcelParser.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.ExcelParser\\obj\\",
+      "projectPath": "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.ExcelParser/TercihSihirbazi.ExcelParser.csproj",
+      "packagesPath": "/Users/kadirkurhan/.nuget/packages/",
+      "outputPath": "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.ExcelParser/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/kadirkurhan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.Business\\TercihSihirbazi.Business.csproj": {
-              "projectPath": "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.Business\\TercihSihirbazi.Business.csproj"
+            "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.Business/TercihSihirbazi.Business.csproj": {
+              "projectPath": "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.Business/TercihSihirbazi.Business.csproj"
             },
-            "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.Entities\\TercihSihirbazi.Entities.csproj": {
-              "projectPath": "D:\\netCoreuygulamalarım\\minimalapiExcelParser\\katmanlımimari\\TercihSihirbazi\\TercihSihirbazi.Entities\\TercihSihirbazi.Entities.csproj"
+            "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.Entities/TercihSihirbazi.Entities.csproj": {
+              "projectPath": "/Users/kadirkurhan/Projects/bootcamp-tercihsihirbazi/bootcamp-tercihsihirbazi/TercihSihirbazi/TercihSihirbazi.Entities/TercihSihirbazi.Entities.csproj"
             }
           }
         }
@@ -1392,7 +1390,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TercihSihirbazi.Data.Interfaces;
 using System.Reflection;
 using TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Context;
+IronXL.License.LicenseKey = "IRONXL.WDRLEOL.25866-CCD9A12761-HCUFEK25B6VFOHPA-DDTUDS6FXST7-Z3KBKUTF2JR2-MBWGQ2YVMASB-KDZII4ROFOJC-ZZTFSF-TFNVVZYTCE2HUA-DEPLOYMENT.TRIAL-D7ZEUD.TRIAL.EXPIRES.23.SEP.2022";
 
 var host = Registration.CreateHostBuilder(args).Build();
 
@@ -31,7 +32,20 @@ string projectDirectory = Directory.GetParent(binDirectory).Parent.FullName;
 
 for (int counter = 2020; counter < 2023; counter++)
 {
-    WorkBook workbook = WorkBook.Load($"{projectDirectory}\\TercihSihirbazi.ExcelParser\\Files\\{counter}.xlsx");
+    WorkBook workbook;
+    try
+    {
+        workbook = WorkBook.Load($"{projectDirectory}\\TercihSihirbazi.ExcelParser\\Files\\{counter}.xlsx");
+
+    }
+    catch
+    {
+        var enviroment2 = System.Environment.CurrentDirectory;
+        string binDirectory2 = Directory.GetParent(enviroment2).Parent.FullName;
+        string projectDirectory2 = Directory.GetParent(binDirectory2).Parent.FullName;
+        //workbook = WorkBook.Load($"{enviroment2}/TercihSihirbazi.ExcelParser/Files/{counter}.xlsx");
+        workbook = WorkBook.Load($"{enviroment2}/Files/{counter}.xlsx");
+    }
 
     WorkSheet sheet = workbook.WorkSheets.First();
     //int cellValue = sheet["A4"].IntValue;
@@ -156,7 +170,7 @@ for (int counter = 2020; counter < 2023; counter++)
 
                     // yearOfExam.OBKEnBuyukPuan = cell.StringValue;
                 }
-                if (counter==2020)
+                if (counter == 2020)
                 {
                     detailObj.Year2020 = JsonSerializer.Serialize(yearOfExam, options: jso);
                 }
@@ -172,15 +186,15 @@ for (int counter = 2020; counter < 2023; counter++)
                 }
                 //cellValuesList.Add(detailObj);
                 var exceldbdata = dbContext.ExcelData.ToList();
-                
+
 
                 var result = exceldbdata.Where(i => i.ProgramKodu == detailObj.ProgramKodu).FirstOrDefault();
 
-                if (result!=null)
+                if (result != null)
                 {
                     if (counter == 2020)
                     {
-                        if(result.Year2020 == null)
+                        if (result.Year2020 == null)
                         {
                             result.Year2020 = detailObj.Year2020;
 
