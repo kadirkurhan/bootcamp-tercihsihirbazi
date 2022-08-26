@@ -13,5 +13,6 @@ namespace TercihSihirbazi.Entities.Concrete
         public string FullName { get; set; }
 
         public List<AppUserRole> AppUserRoles { get; set; }
+        public virtual ICollection<DetailObject> AppUserFavorites { get; set; }
     }
 }

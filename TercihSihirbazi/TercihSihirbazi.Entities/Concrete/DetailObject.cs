@@ -11,7 +11,7 @@ namespace TercihSihirbazi.Entities.Concrete
     {
         public int Id { get; set; }
     }
-    public class DetailObject : BaseEntity,ITable
+    public class DetailObject : BaseEntity, ITable
     {
         public int ProgramKodu { get; set; }
         public string ProgramAdi { get; set; }
@@ -28,7 +28,7 @@ namespace TercihSihirbazi.Entities.Concrete
         public string Year2027 { get; set; }
         public string Year2028 { get; set; }
 
-
+        public virtual ICollection<AppUser> FavoritedAppUsers { get; set; }
     }
 
     public class YearOfExam
