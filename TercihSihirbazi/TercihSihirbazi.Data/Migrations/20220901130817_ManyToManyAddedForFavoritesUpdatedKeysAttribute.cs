@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace TercihSihirbazi.Data.Migrations
 {
-    public partial class excelData : Migration
+    public partial class ManyToManyAddedForFavoritesUpdatedKeysAttribute : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,6 +20,18 @@ namespace TercihSihirbazi.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AppRoles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AppUserFavorites",
+                columns: table => new
+                {
+                    AppUserId = table.Column<int>(type: "integer", nullable: false),
+                    DetailObjectId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AppUserFavorites", x => new { x.AppUserId, x.DetailObjectId });
                 });
 
             migrationBuilder.CreateTable(
@@ -44,6 +56,9 @@ namespace TercihSihirbazi.Data.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ProgramKodu = table.Column<int>(type: "integer", nullable: false),
+                    UniversiteTuru = table.Column<string>(type: "text", nullable: false),
+                    UniversiteAdi = table.Column<string>(type: "text", nullable: false),
+                    FakulteAdi = table.Column<string>(type: "text", nullable: false),
                     ProgramAdi = table.Column<string>(type: "text", nullable: false),
                     PuanTuru = table.Column<string>(type: "text", nullable: false),
                     Year2018 = table.Column<string>(type: "text", nullable: true),
@@ -51,12 +66,7 @@ namespace TercihSihirbazi.Data.Migrations
                     Year2020 = table.Column<string>(type: "text", nullable: true),
                     Year2021 = table.Column<string>(type: "text", nullable: true),
                     Year2022 = table.Column<string>(type: "text", nullable: true),
-                    Year2023 = table.Column<string>(type: "text", nullable: true),
-                    Year2024 = table.Column<string>(type: "text", nullable: true),
-                    Year2025 = table.Column<string>(type: "text", nullable: true),
-                    Year2026 = table.Column<string>(type: "text", nullable: true),
-                    Year2027 = table.Column<string>(type: "text", nullable: true),
-                    Year2028 = table.Column<string>(type: "text", nullable: true)
+                    Year2023 = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -102,6 +112,35 @@ namespace TercihSihirbazi.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "AppUserDetailObject",
+                columns: table => new
+                {
+                    AppUserFavoritesId = table.Column<int>(type: "integer", nullable: false),
+                    FavoritedAppUsersId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AppUserDetailObject", x => new { x.AppUserFavoritesId, x.FavoritedAppUsersId });
+                    table.ForeignKey(
+                        name: "FK_AppUserDetailObject_AppUsers_FavoritedAppUsersId",
+                        column: x => x.FavoritedAppUsersId,
+                        principalTable: "AppUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AppUserDetailObject_ExcelData_AppUserFavoritesId",
+                        column: x => x.AppUserFavoritesId,
+                        principalTable: "ExcelData",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AppUserDetailObject_FavoritedAppUsersId",
+                table: "AppUserDetailObject",
+                column: "FavoritedAppUsersId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_AppUserRoles_AppRoleId",
                 table: "AppUserRoles",
@@ -123,13 +162,19 @@ namespace TercihSihirbazi.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AppUserDetailObject");
+
+            migrationBuilder.DropTable(
+                name: "AppUserFavorites");
+
+            migrationBuilder.DropTable(
                 name: "AppUserRoles");
 
             migrationBuilder.DropTable(
-                name: "ExcelData");
+                name: "Profiles");
 
             migrationBuilder.DropTable(
-                name: "Profiles");
+                name: "ExcelData");
 
             migrationBuilder.DropTable(
                 name: "AppRoles");

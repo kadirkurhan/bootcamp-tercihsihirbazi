@@ -12,7 +12,7 @@ namespace TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("server=localhost; database=tercihsihirbazi; username=postgres; password=5eed812a; Integrated Security=true;", b=>b.MigrationsAssembly("TercihSihirbazi.Data"));
+            optionsBuilder.UseNpgsql("server=localhost; database=tercihsihirbazi; username=postgres; password=5eed812a; Integrated Security=true;", b => b.MigrationsAssembly("TercihSihirbazi.Data"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -23,6 +23,18 @@ namespace TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Context
             modelBuilder.ApplyConfiguration(new ProfileMap());
             modelBuilder.ApplyConfiguration(new ExcelDataMap());
 
+            modelBuilder.Entity<AppUserFavorites>()
+                .HasKey(x => new { x.AppUserId, x.DetailObjectId });
+
+            // modelBuilder.Entity<AppUserFavorites>()
+            //     .HasOne(uf => uf.AppUser)
+            //     .WithMany(u => u.AppUserFavorites)
+            //     .HasForeignKey(uf=>uf.Id);
+
+            // modelBuilder.Entity<AppUserFavorites>()
+            //     .HasOne(uf => uf.DetailObject)
+            //     .WithMany(d => d.FavoritedAppUsers)
+            //     .HasForeignKey(uf=>uf.Id);
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
@@ -30,6 +42,7 @@ namespace TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Context
         public DbSet<AppUserRole> AppUserRoles { get; set; }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<DetailObject> ExcelData { get; set; }
+        public DbSet<AppUserFavorites> AppUserFavorites { get; set; }
 
     }
 }

@@ -16,18 +16,12 @@ namespace TercihSihirbazi.Data.Concrete.EntityFrameworkCore.Mapping
             builder.HasKey(I => I.Id);
             builder.Property(I => I.Id).UseIdentityColumn();
 
-            builder.Property(I=>I.Year2018).IsRequired(required:false);
+            builder.Property(I => I.Year2018).IsRequired(required: false);
             builder.Property(I => I.Year2019).IsRequired(required: false);
             builder.Property(I => I.Year2020).IsRequired(required: false);
             builder.Property(I => I.Year2021).IsRequired(required: false);
             builder.Property(I => I.Year2022).IsRequired(required: false);
             builder.Property(I => I.Year2023).IsRequired(required: false);
-            builder.Property(I => I.Year2024).IsRequired(required: false);
-            builder.Property(I => I.Year2025).IsRequired(required: false);
-            builder.Property(I => I.Year2026).IsRequired(required: false);
-            builder.Property(I => I.Year2027).IsRequired(required: false);
-            builder.Property(I => I.Year2028).IsRequired(required: false);
-
         }
     }
 }

@@ -7,28 +7,24 @@ using TercihSihirbazi.Entities.Interfaces;
 
 namespace TercihSihirbazi.Entities.Concrete
 {
-    public class BaseEntity
+    public class DetailObject : ITable
     {
         public int Id { get; set; }
-    }
-    public class DetailObject : BaseEntity, ITable
-    {
         public int ProgramKodu { get; set; }
+        public string UniversiteTuru { get; set; }
+        public string UniversiteAdi { get; set; }
+        public string FakulteAdi { get; set; }
         public string ProgramAdi { get; set; }
         public string PuanTuru { get; set; }
+        public ICollection<AppUser> FavoritedAppUsers { get; set; }
+
         public string Year2018 { get; set; }
         public string Year2019 { get; set; }
         public string Year2020 { get; set; }
         public string Year2021 { get; set; }
         public string Year2022 { get; set; }
         public string Year2023 { get; set; }
-        public string Year2024 { get; set; }
-        public string Year2025 { get; set; }
-        public string Year2026 { get; set; }
-        public string Year2027 { get; set; }
-        public string Year2028 { get; set; }
 
-        public virtual ICollection<AppUser> FavoritedAppUsers { get; set; }
     }
 
     public class YearOfExam

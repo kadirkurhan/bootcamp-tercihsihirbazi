@@ -21,6 +21,7 @@ namespace TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Mapping
             builder.Property(I => I.FullName).HasMaxLength(150);
 
             builder.HasMany(I => I.AppUserRoles).WithOne(I => I.AppUser).HasForeignKey(I => I.AppUserId).OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }
