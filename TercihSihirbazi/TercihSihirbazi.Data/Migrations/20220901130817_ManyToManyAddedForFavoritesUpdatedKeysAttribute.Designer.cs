@@ -11,8 +11,8 @@ using TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Context;
 namespace TercihSihirbazi.Data.Migrations
 {
     [DbContext(typeof(TercihSihirbaziContext))]
-    [Migration("20220826092854_manyToManyRelationCreated")]
-    partial class manyToManyRelationCreated
+    [Migration("20220901130817_ManyToManyAddedForFavoritesUpdatedKeysAttribute")]
+    partial class ManyToManyAddedForFavoritesUpdatedKeysAttribute
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,6 +87,19 @@ namespace TercihSihirbazi.Data.Migrations
                     b.ToTable("AppUsers");
                 });
 
+            modelBuilder.Entity("TercihSihirbazi.Entities.Concrete.AppUserFavorites", b =>
+                {
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("DetailObjectId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("AppUserId", "DetailObjectId");
+
+                    b.ToTable("AppUserFavorites");
+                });
+
             modelBuilder.Entity("TercihSihirbazi.Entities.Concrete.AppUserRole", b =>
                 {
                     b.Property<int>("Id")
@@ -119,6 +132,10 @@ namespace TercihSihirbazi.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("FakulteAdi")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("ProgramAdi")
                         .IsRequired()
                         .HasColumnType("text");
@@ -127,6 +144,14 @@ namespace TercihSihirbazi.Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("PuanTuru")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UniversiteAdi")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UniversiteTuru")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -146,21 +171,6 @@ namespace TercihSihirbazi.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Year2023")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Year2024")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Year2025")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Year2026")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Year2027")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Year2028")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

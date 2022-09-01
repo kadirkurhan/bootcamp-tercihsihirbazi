@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using System.Text;
+﻿using System.Text;
 using TercihSihirbazi.Entities.Concrete;
 using IronXL;
 using TercihSihirbazi.ExcelParser;
@@ -8,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using TercihSihirbazi.Data.Interfaces;
 using System.Reflection;
 using TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Context;
+using System.Text.Json;
+
 IronXL.License.LicenseKey = "IRONXL.WDRLEOL.25866-CCD9A12761-HCUFEK25B6VFOHPA-DDTUDS6FXST7-Z3KBKUTF2JR2-MBWGQ2YVMASB-KDZII4ROFOJC-ZZTFSF-TFNVVZYTCE2HUA-DEPLOYMENT.TRIAL-D7ZEUD.TRIAL.EXPIRES.23.SEP.2022";
 
 var host = Registration.CreateHostBuilder(args).Build();
@@ -27,10 +28,15 @@ var enviroment = System.Environment.CurrentDirectory;
 string binDirectory = Directory.GetParent(enviroment).Parent.FullName;
 string projectDirectory = Directory.GetParent(binDirectory).Parent.FullName;
 
+if (System.Diagnostics.Debugger.IsAttached)
+{
+    Console.WriteLine("debug modunda");
+}
+
 //Supported spreadsheet formats for reading include: XLSX, XLS, CSV and TSV
 //WorkBook workbook = WorkBook.Load(@"D:\netCoreuygulamalarım\minimalapiExcelParser\netcoreapi\ExcelData\ExcelReader\Files\2020.xlsx");
 
-for (int counter = 2020; counter < 2023; counter++)
+for (int counter = 2021; counter < 2023; counter++)
 {
     WorkBook workbook;
     try
@@ -44,7 +50,7 @@ for (int counter = 2020; counter < 2023; counter++)
         string binDirectory2 = Directory.GetParent(enviroment2).Parent.FullName;
         string projectDirectory2 = Directory.GetParent(binDirectory2).Parent.FullName;
         //workbook = WorkBook.Load($"{enviroment2}/TercihSihirbazi.ExcelParser/Files/{counter}.xlsx");
-        workbook = WorkBook.Load($"{enviroment2}/Files/{counter}.xlsx");
+        workbook = WorkBook.Load($"{enviroment2}/TercihSihirbazi.ExcelParser/Files/{counter}.xlsx");
     }
 
     WorkSheet sheet = workbook.WorkSheets.First();
@@ -64,7 +70,7 @@ for (int counter = 2020; counter < 2023; counter++)
 
     YearOfExam yearOfExam = new YearOfExam();
 
-    foreach (var cell in sheet["A:K"])
+    foreach (var cell in sheet["A:N"])
     {
         switch (i)
         {
@@ -73,103 +79,99 @@ for (int counter = 2020; counter < 2023; counter++)
                 i++;
                 break;
             case 1:
-                detailObj.ProgramAdi = cell.StringValue;
+                detailObj.UniversiteTuru = cell.StringValue;
                 i++;
                 break;
             case 2:
-                detailObj.PuanTuru = cell.StringValue;
+                detailObj.UniversiteAdi = cell.StringValue;
                 i++;
                 break;
             case 3:
-                try
-                {
-                    yearOfExam.GenelKontenjan = cell.IntValue;
-                }
-                catch
-                {
-                    //yearOfExam.GenelKontenjan = cell.StringValue;
-                }
+                detailObj.FakulteAdi = cell.StringValue;
                 i++;
                 break;
             case 4:
-                try
-                {
-                    yearOfExam.Yerlesen = cell.IntValue;
-                }
-                catch
-                {
-                    //yearOfExam.Yerlesen = cell.StringValue;
-                }
+                detailObj.ProgramAdi = cell.StringValue;
                 i++;
                 break;
             case 5:
-                try
-                {
-                    yearOfExam.EnKucukPuan = cell.IntValue;
-                }
-                catch
-                {
-                    // yearOfExam.EnKucukPuan = cell.StringValue;
-                }
+                detailObj.PuanTuru = cell.StringValue;
                 i++;
                 break;
             case 6:
-                try
-                {
-                    yearOfExam.EnBuyukPuan = cell.IntValue;
-                }
-                catch
-                {
-                    // yearOfExam.EnBuyukPuan = cell.StringValue;
-                }
+
+                yearOfExam.GenelKontenjan = cell.IntValue;
+
                 i++;
                 break;
             case 7:
-                try
+                if (cell.Text == "--")
                 {
-                    yearOfExam.OBKontenjan = cell.IntValue;
+                    yearOfExam.Yerlesen = 0;
                 }
-                catch
+                else
                 {
-                    // yearOfExam.OBKontenjan = cell.StringValue;
+                    yearOfExam.Yerlesen = cell.IntValue;
                 }
                 i++;
                 break;
             case 8:
-                try
+                if (cell.Text == "--")
                 {
-                    yearOfExam.OBYerlesen = cell.IntValue;
-
+                    yearOfExam.EnKucukPuan = 0;
                 }
-                catch
+                else
                 {
-                    // yearOfExam.OBYerlesen = cell.StringValue;
+                    yearOfExam.EnKucukPuan = cell.IntValue;
                 }
                 i++;
                 break;
             case 9:
-                try
+                if (cell.Text == "--")
                 {
-                    yearOfExam.OBKEnKucukPuan = cell.IntValue;
-
+                    yearOfExam.EnBuyukPuan = 0;
                 }
-                catch
+                else
                 {
-                    // yearOfExam.OBKEnKucukPuan = cell.StringValue;
-
+                    yearOfExam.EnBuyukPuan = cell.IntValue;
                 }
                 i++;
                 break;
             case 10:
-                try
+                if (cell.Text == "--")
                 {
-                    yearOfExam.OBKEnBuyukPuan = cell.IntValue;
+                    yearOfExam.OBKontenjan = 0;
                 }
-                catch (Exception)
+                else
                 {
-
-                    // yearOfExam.OBKEnBuyukPuan = cell.StringValue;
+                    yearOfExam.OBKontenjan = cell.IntValue;
                 }
+                i++;
+                break;
+            case 11:
+                if (cell.Text == "--")
+                {
+                    yearOfExam.Yerlesen = 0;
+                }
+                else
+                {
+                    yearOfExam.OBYerlesen = cell.IntValue;
+                }
+                i++;
+                break;
+            case 12:
+                if (cell.Text == "--")
+                {
+                    yearOfExam.OBKEnKucukPuan = 0;
+                }
+                else
+                {
+                    yearOfExam.OBKEnKucukPuan = cell.IntValue;
+                }
+                i++;
+                break;
+            case 13:
+                yearOfExam.OBKEnBuyukPuan = cell.IntValue;
                 if (counter == 2020)
                 {
                     detailObj.Year2020 = JsonSerializer.Serialize(yearOfExam, options: jso);

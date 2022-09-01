@@ -6,7 +6,7 @@ using TercihSihirbazi.Business.Interfaces;
 using TercihSihirbazi.Business.StringInfos;
 using TercihSihirbazi.Entities.Concrete;
 
-namespace TercihSihirbazi.API
+namespace TercihSihirbazi.API.InitialMigrate
 {
     public static class JwtIdentityInitializer
     {

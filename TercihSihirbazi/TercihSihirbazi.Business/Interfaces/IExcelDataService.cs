@@ -7,7 +7,10 @@ using TercihSihirbazi.Entities.Concrete;
 
 namespace TercihSihirbazi.Business.Interfaces
 {
-    public interface IExcelDataService:IGenericService<DetailObject>
+    public interface IExcelDataService : IGenericService<DetailObject>
     {
+        Task<List<DetailObject>> KontenjanMapping(List<DetailObject> list);
+
+
     }
 }

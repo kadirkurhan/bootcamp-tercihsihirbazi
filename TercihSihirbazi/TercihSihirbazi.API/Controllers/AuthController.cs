@@ -48,7 +48,32 @@ namespace TercihSihirbazi.WebApi.Controllers
                     var token = _jwtService.GenerateJwt(appUser, roles);
                     JwtAccessToken jwtAccessToken = new JwtAccessToken();
                     jwtAccessToken.Token = token;
-                    return Created("", jwtAccessToken);
+
+                    var appUserRole = roles.FirstOrDefault();
+
+                    AppUserAbilityDto ability = new()
+                    {
+                        action = "read",
+                        subject = "Auth"
+                    };
+                    UserData userData = new UserData()
+                    {
+                        UserName = appUser.UserName,
+                        ability = ability,
+                        role = appUserRole.Name,
+                        NickName = appUser.FullName
+
+                    };
+
+                    AppUserLoginWithTokenDto response = new AppUserLoginWithTokenDto()
+                    {
+                        userData = userData,
+                        accessToken = token,
+                        refreshToken = "",
+
+                    };
+
+                    return Created("", response);
                 }
                 return BadRequest("kullanıcı adı veya şifre hatalı");
             }
@@ -72,7 +97,38 @@ namespace TercihSihirbazi.WebApi.Controllers
                 AppRoleId = role.Id,
                 AppUserId = user.Id
             });
-            return Created("", appUserAddDto);
+
+
+            List<AppRole> roles = new List<AppRole>(){
+                new AppRole{
+                    Id = role.Id,
+                    Name = RoleInfo.Member
+                }
+            };
+
+            var token = _jwtService.GenerateJwt(user, roles);
+            AppUserAbilityDto ability = new()
+            {
+                action = "read",
+                subject = "Auth"
+            };
+            UserData userData = new UserData()
+            {
+                UserName = user.UserName,
+                ability = ability,
+                role = RoleInfo.Member,
+                NickName = user.FullName
+            };
+
+            AppUserLoginWithTokenDto response = new AppUserLoginWithTokenDto()
+            {
+                userData = userData,
+                accessToken = token,
+                refreshToken = ""
+            };
+
+            //await SignIn(appUserAddDto.UserName, appUserAddDto.Password);
+            return Created("", response);
         }
 
 
@@ -83,7 +139,7 @@ namespace TercihSihirbazi.WebApi.Controllers
         {
             var user = await _appUserService.FindByUserName(User.Identity.Name);
             var roles = await _appUserService.GetRolesByUserName(User.Identity.Name);
-
+            
             AppUserDto appUserDto = new AppUserDto
             {
                 FullName = user.FullName,

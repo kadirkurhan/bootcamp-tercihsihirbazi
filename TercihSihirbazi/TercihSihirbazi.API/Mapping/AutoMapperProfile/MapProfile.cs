@@ -21,6 +21,8 @@ namespace TercihSihirbazi.WebApi.Mapping.AutoMapperProfile
 
             CreateMap<AppUserAddDto, AppUser>();
             CreateMap<AppUser, AppUserAddDto>();
+
+            CreateMap<AppUserFavorites, ProfileFavoriteDto>().ReverseMap();
         }
     }
 }
