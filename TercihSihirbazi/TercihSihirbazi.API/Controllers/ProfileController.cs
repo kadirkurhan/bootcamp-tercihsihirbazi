@@ -22,11 +22,12 @@ namespace TercihSihirbazi.WebApi.Controllers
         private readonly IExcelDataService _excelDataService;
         private readonly IAppUserService _appUserService;
         private readonly IMapper _mapper;
-        public ProfileController(IProfileService profileService, IMapper mapper, IExcelDataService excelDataService)
+        public ProfileController(IProfileService profileService, IMapper mapper, IExcelDataService excelDataService, IAppUserService appUserService)
         {
             _mapper = mapper;
             _profileService = profileService;
             _excelDataService = excelDataService;
+            _appUserService = appUserService;
         }
 
         //api/profile
@@ -58,51 +59,114 @@ namespace TercihSihirbazi.WebApi.Controllers
             return Created("", profileAddDto);
 
         }
+        // [Authorize]
+        // [HttpGet]
+        // [Route("AddAsMember")]
+        // public async Task<IActionResult> AddAsMember(int id)
+        // {
+        //     Functions functions = new Functions();
+        //     //var activeUser = await functions.ActiveUser(User.Identity.Name);
+        //     var kadirUser = await _appUserService.FindByUserName("test@test.com");
+        //     TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
+        //     ProfileFavoriteDto favoriteDto = new ProfileFavoriteDto()
+        //     {
+        //         AppUserId = kadirUser.Id,
+        //         DetailObjectId = id
+        //     };
+        //     dbcontext.AppUserFavorites.AddAsync(_mapper.Map<AppUserFavorites>(favoriteDto));
+        //     dbcontext.SaveChangesAsync();
+        //     AppUser findedUser = await dbcontext.AppUsers.Include(i => i.AppUserFavorites).Include(i => i.AppUserRoles).Where(i => i.Id == 1).FirstOrDefaultAsync();
+
+        //     var findedBolum = dbcontext.ExcelData.Include(i => i.FavoritedAppUsers).Where(i => i.Id == 12836).FirstOrDefault();
+        //     //findedBolum..Add(new{ AppUserFavoritesId=findedBolum.Id,AppUserId=findedUser.Id });
+
+        //     //dbcontext.SaveChanges();
+        //     //dbcontext.ExcelData.Update(findedBolum);
+        //     var result = dbcontext.AppUsers.Include(i => i.AppUserFavorites).ToList();
+
+        //     return Ok(findedUser);
+
+        // }
         [Authorize]
         [HttpGet]
-        [Route("AddAsMember")]
-        public async Task<IActionResult> AddAsMember(int id)
+        [Route("GetUserFavorites")]
+        public async Task<IActionResult> GetUserFavorites(string username)
         {
-            Functions functions = new Functions();
-            //var activeUser = await functions.ActiveUser(User.Identity.Name);
-            var kadirUser = await _appUserService.FindByUserName("test@test.com");
-            TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
-            ProfileFavoriteDto favoriteDto = new ProfileFavoriteDto()
-            {
-                AppUserId = kadirUser.Id,
-                DetailObjectId = id
-            };
-            dbcontext.AppUserFavorites.AddAsync(_mapper.Map<AppUserFavorites>(favoriteDto));
-            dbcontext.SaveChangesAsync();
-            AppUser findedUser = await dbcontext.AppUsers.Include(i => i.AppUserFavorites).Include(i => i.AppUserRoles).Where(i => i.Id == 1).FirstOrDefaultAsync();
 
-            var findedBolum = dbcontext.ExcelData.Include(i => i.FavoritedAppUsers).Where(i => i.Id == 12836).FirstOrDefault();
-            //findedBolum..Add(new{ AppUserFavoritesId=findedBolum.Id,AppUserId=findedUser.Id });
+            var result = await _appUserService.GetFavoritesByUserName(username);
+            //var result = await _appUserService.GetAll();
+            //Functions functions = new Functions();
+            //var activeUser = _appUserService.FindByUserName("test@test.com");
+            // var kadirUser = await _appUserService.FindByUserName("kadir");
+            // var result = await _appUserService.FindByUserName(username);
+            // TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
 
-            //dbcontext.SaveChanges();
-            //dbcontext.ExcelData.Update(findedBolum);
-            var result = dbcontext.AppUsers.Include(i => i.AppUserFavorites).ToList();
-
-            return Ok(findedUser);
+            // ProfileFavoriteDto favoriteDto = new ProfileFavoriteDto()
+            // {
+            //     AppUserId = 1,
+            //     DetailObjectId = id
+            // };
+            //var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == 1).ToListAsync();
+            //var result = dbcontext.AppUserFavorites.ToList();
+            return Ok(result);
 
         }
         [Authorize]
         [HttpGet]
-        [Route("GetAsMember")]
-        public async Task<IActionResult> GetAsMember(int id)
+        [Route("GetAppUserWithFavorites")]
+        public async Task<IActionResult> GetAppUserWithFavorites(string username)
+        {
+            var user = await _appUserService.GetAppUserWithFavorites(username);
+            return Ok(user);
+        }
+
+
+
+        [HttpGet]
+        [Route("AddFavoriteAsMember")]
+        public async Task<IActionResult> AddFavoriteAsMember(int id, string username)
         {
             Functions functions = new Functions();
-            //var activeUser = await functions.ActiveUser(User.Identity.Name);
-            //var kadirUser = await _appUserService.FindByUserName("test@test.com");
-            TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
-            // ProfileFavoriteDto favoriteDto = new ProfileFavoriteDto()
-            // {
-            //     AppUserId = kadirUser.Id,
-            //     DetailObjectId = id
-            // };
-            var result = dbcontext.AppUserFavorites.Where(i => i.AppUserId == 1).FirstOrDefaultAsync();
+            var user = await _appUserService.FindByUserName(username);
+            // ui halledildiğinde alltan devam edilecek username parametresi kaldırılacak..
+            //var user = await _appUserService.FindByUserName(User.Identity.Name);
 
+            TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
+
+            ProfileFavoriteDto AddedfavoriteDto = new ProfileFavoriteDto()
+            {
+                AppUserId = user.Id,
+                DetailObjectId = id
+            };
+
+            await dbcontext.AppUserFavorites.AddAsync(_mapper.Map<AppUserFavorites>(AddedfavoriteDto));
+            await dbcontext.SaveChangesAsync();
+            var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == user.Id).Select(i => i.DetailObjectId).ToListAsync();
             return Ok(result);
+
+        }
+
+        [HttpDelete]
+        [Route("DeleteFavoriteAsMember")]
+        public async Task<IActionResult> DeleteFavoriteAsMember(int id, string username)
+        {
+            Functions functions = new Functions();
+            var user = await _appUserService.FindByUserName(username);
+            // ui halledildiğinde alltan devam edilecek username parametresi kaldırılacak..
+            //var user = await _appUserService.FindByUserName(User.Identity.Name);
+
+            TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
+
+            ProfileFavoriteDto AddedfavoriteDto = new ProfileFavoriteDto()
+            {
+                AppUserId = user.Id,
+                DetailObjectId = id
+            };
+            var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == user.Id && i.DetailObjectId == id).FirstOrDefaultAsync();
+            dbcontext.AppUserFavorites.Remove(result);
+            await dbcontext.SaveChangesAsync();
+            //var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == user.Id).Select(i => i.DetailObjectId).ToListAsync();
+            return Ok(result.DetailObjectId);
 
         }
 

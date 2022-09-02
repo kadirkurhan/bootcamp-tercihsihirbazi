@@ -4,6 +4,7 @@ using TercihSihirbazi.Business.Interfaces;
 using TercihSihirbazi.DataAccess.Interfaces;
 using TercihSihirbazi.Entities.Concrete;
 using TercihSihirbazi.Entities.Dtos.AppUserDtos;
+using TercihSihirbazi.Entities.Dtos.ProfileDtos;
 
 namespace TercihSihirbazi.Business.Concrete
 {
@@ -26,9 +27,20 @@ namespace TercihSihirbazi.Business.Concrete
             return await _appUserDal.GetByFilter(I => I.UserName == userName);
         }
 
+        public async Task<List<AppUserFavorites>> GetFavoritesByUserName(string userName)
+        {
+            return await _appUserDal.GetFavoritesByUserName(userName);
+        }
+
         public async Task<List<AppRole>> GetRolesByUserName(string userName)
         {
             return await _appUserDal.GetRolesByUserName(userName);
+        }
+
+        public async Task<ProfileUserFavoritesDto> GetAppUserWithFavorites(string userName)
+        {
+            return await _appUserDal.GetAppUserWithFavorites(userName);
+
         }
     }
 }
