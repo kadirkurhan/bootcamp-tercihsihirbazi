@@ -22,7 +22,6 @@ namespace TercihSihirbazi.DataAccess.Concrete.EntityFrameworkCore.Repositories
         public async Task<List<TEntity>> GetAll()
         {
             using var context = new TercihSihirbaziContext();
-            var result = context.Profiles.Where(x => x.Id == 1).ToList(); // Linq
 
             return await context.Set<TEntity>().ToListAsync();
         }
