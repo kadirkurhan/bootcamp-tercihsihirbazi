@@ -170,6 +170,22 @@ namespace TercihSihirbazi.WebApi.Controllers
 
         }
 
+        [HttpGet]
+        [Route("MostPreferredSection")]
+        public async Task<IActionResult> MostPreferredSection()
+        {
+            using var context = new TercihSihirbaziContext();
+
+
+            var list = await context.AppUserFavorites.Select(i => i.DetailObjectId).ToListAsync();
+            var q = list.GroupBy(x => x)
+            .Select(g => new { Value = g.Key, Count = g.Count() })
+            .OrderByDescending(x => x.Count);
+
+            return Ok(q);
+        }
+
+
         [HttpPut]
         [Authorize(Roles = RoleInfo.Admin)]
         [ValidModel]
