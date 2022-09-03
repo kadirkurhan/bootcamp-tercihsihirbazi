@@ -202,14 +202,24 @@ namespace TercihSihirbazi.WebApi.Controllers
 
         [HttpGet]
         [Route("MostPreferredSection")]
-        public async Task<IActionResult> MostPreferredSection()
+        public async Task<IActionResult> MostPreferredSection(string? filter = null)
         {
             using var context = new TercihSihirbaziContext();
+            List<DetailObject> list = new();
+            if (filter != null)
+            {
+                if (filter == "SAY" || filter == "SÖZ" || filter == "EA" || filter == "DİL")
+                {
+                    list = await context.ExcelData.Where(i => i.PuanTuru == filter).ToListAsync();
+                }
+            }
+            else if (filter == null)
+            {
+                list = await context.ExcelData.ToListAsync();
+            }
 
-            var list = await context.ExcelData.Select(i => i.Year2021).ToListAsync();
-            //list.Select(i=>JsonSerializer.Deserialize<Business.Dtos.YearOfExamDto>(i.Year2021));
-            var q = list.GroupBy(x => x)
-            .Select(g => new { Value = g.Key, Count = g.Count() })
+            var q = list.GroupBy(x => x.ProgramAdi)
+            .Select(g => new { Value = g.Key, Count = g.Sum(x => x.Yerlesen) })
             .OrderByDescending(x => x.Count);
 
             return Ok(q);

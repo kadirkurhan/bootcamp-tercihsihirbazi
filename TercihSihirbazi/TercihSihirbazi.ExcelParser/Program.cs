@@ -112,6 +112,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 else
                 {
                     yearOfExam.Yerlesen = Convert.ToInt32(cell.Text);
+                    detailObj.Yerlesen = yearOfExam.Yerlesen;
                 }
                 i++;
                 break;
@@ -151,7 +152,7 @@ for (int counter = 2021; counter < 2023; counter++)
             case 11:
                 if (cell.Text == "--")
                 {
-                    yearOfExam.Yerlesen = 0;
+                    yearOfExam.OBYerlesen = 0;
                 }
                 else
                 {
