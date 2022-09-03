@@ -137,9 +137,10 @@ namespace TercihSihirbazi.WebApi.Controllers
         [Authorize]
         public async Task<IActionResult> ActiveUser()
         {
+            //User.Claims.SingleOrDefault(i => i.Type == System.Security.Claims.ClaimTypes.Name).Value
             var user = await _appUserService.FindByUserName(User.Identity.Name);
             var roles = await _appUserService.GetRolesByUserName(User.Identity.Name);
-            
+
             AppUserDto appUserDto = new AppUserDto
             {
                 FullName = user.FullName,
