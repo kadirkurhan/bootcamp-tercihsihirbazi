@@ -17,6 +17,7 @@ namespace TercihSihirbazi.Entities.Concrete
         public string ProgramAdi { get; set; }
         public string PuanTuru { get; set; }
         public ICollection<AppUser> FavoritedAppUsers { get; set; }
+        public int Yerlesen { get; set; }
         public string Year2018 { get; set; }
         public string Year2019 { get; set; }
         public string Year2020 { get; set; }

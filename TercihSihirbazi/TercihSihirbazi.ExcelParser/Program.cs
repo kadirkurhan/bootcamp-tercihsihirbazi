@@ -55,11 +55,11 @@ for (int counter = 2021; counter < 2023; counter++)
 
     WorkSheet sheet = workbook.WorkSheets.First();
     //int cellValue = sheet["A4"].IntValue;
-    object myValue = sheet["A3"].StringValue;
+    //object myValue = sheet["A3"].StringValue;
     //Tuple<string, object> cellValuesDict = new Tuple<string, object>();
     List<DetailObject> cellValuesList = new List<DetailObject>();
     // Read from Ranges of cells elegantly.
-    foreach (var cell in sheet["A3:K3"])
+    foreach (var cell in sheet["A3:N3"])
     {
         Console.WriteLine("Cell {0} has value '{1}'", cell.AddressString, cell.Text);
     }
@@ -100,7 +100,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 break;
             case 6:
 
-                yearOfExam.GenelKontenjan = cell.IntValue;
+                yearOfExam.GenelKontenjan = Convert.ToInt32(cell.Text);
 
                 i++;
                 break;
@@ -111,7 +111,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 }
                 else
                 {
-                    yearOfExam.Yerlesen = cell.IntValue;
+                    yearOfExam.Yerlesen = Convert.ToInt32(cell.Text);
                 }
                 i++;
                 break;
@@ -122,7 +122,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 }
                 else
                 {
-                    yearOfExam.EnKucukPuan = cell.IntValue;
+                    yearOfExam.EnKucukPuan = Convert.ToInt32(Convert.ToDouble(cell.Text));
                 }
                 i++;
                 break;
@@ -133,7 +133,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 }
                 else
                 {
-                    yearOfExam.EnBuyukPuan = cell.IntValue;
+                    yearOfExam.EnBuyukPuan = Convert.ToInt32(Convert.ToDouble(cell.Text));
                 }
                 i++;
                 break;
@@ -144,7 +144,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 }
                 else
                 {
-                    yearOfExam.OBKontenjan = cell.IntValue;
+                    yearOfExam.OBKontenjan = Convert.ToInt32(cell.Text);
                 }
                 i++;
                 break;
@@ -155,7 +155,7 @@ for (int counter = 2021; counter < 2023; counter++)
                 }
                 else
                 {
-                    yearOfExam.OBYerlesen = cell.IntValue;
+                    yearOfExam.OBYerlesen = Convert.ToInt32(cell.Text);
                 }
                 i++;
                 break;
@@ -166,12 +166,19 @@ for (int counter = 2021; counter < 2023; counter++)
                 }
                 else
                 {
-                    yearOfExam.OBKEnKucukPuan = cell.IntValue;
+                    yearOfExam.OBKEnKucukPuan = Convert.ToInt32(Convert.ToDouble(cell.Text));
                 }
                 i++;
                 break;
             case 13:
-                yearOfExam.OBKEnBuyukPuan = cell.IntValue;
+                if (cell.Text == "--")
+                {
+                    yearOfExam.OBKEnBuyukPuan = 0;
+                }
+                else
+                {
+                    yearOfExam.OBKEnBuyukPuan = Convert.ToInt32(Convert.ToDouble(cell.Text));
+                }
                 if (counter == 2020)
                 {
                     detailObj.Year2020 = JsonSerializer.Serialize(yearOfExam, options: jso);

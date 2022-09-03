@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Text.Json;
+using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
@@ -124,10 +125,10 @@ namespace TercihSihirbazi.WebApi.Controllers
 
         [HttpGet]
         [Route("AddFavoriteAsMember")]
-        public async Task<IActionResult> AddFavoriteAsMember(int id, string username)
+        public async Task<IActionResult> AddFavoriteAsMember(int id)
         {
             Functions functions = new Functions();
-            var user = await _appUserService.FindByUserName(username);
+            var user = await _appUserService.FindByUserName(User.Claims.SingleOrDefault(i => i.Type == System.Security.Claims.ClaimTypes.Name).Value);
             // ui halledildiğinde alltan devam edilecek username parametresi kaldırılacak..
             //var user = await _appUserService.FindByUserName(User.Identity.Name);
 
@@ -171,13 +172,42 @@ namespace TercihSihirbazi.WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("MostPreferredSection")]
-        public async Task<IActionResult> MostPreferredSection()
+        [Route("MostPreferredSectionForUsers")]
+        public async Task<IActionResult> MostPreferredSectionForUsers()
         {
             using var context = new TercihSihirbaziContext();
 
 
             var list = await context.AppUserFavorites.Select(i => i.DetailObjectId).ToListAsync();
+            var q = list.GroupBy(x => x)
+            .Select(g => new { Value = g.Key, Count = g.Count() })
+            .OrderByDescending(x => x.Count);
+
+            return Ok(q);
+        }
+
+        [HttpGet]
+        [Route("NumberOfSections")]
+        public async Task<IActionResult> NumberOfSections()
+        {
+            using var context = new TercihSihirbaziContext();
+
+            var list = await context.ExcelData.Select(i => i.ProgramAdi).ToListAsync();
+            var q = list.GroupBy(x => x)
+            .Select(g => new { Value = g.Key, Count = g.Count() })
+            .OrderByDescending(x => x.Count);
+
+            return Ok(q);
+        }
+
+        [HttpGet]
+        [Route("MostPreferredSection")]
+        public async Task<IActionResult> MostPreferredSection()
+        {
+            using var context = new TercihSihirbaziContext();
+
+            var list = await context.ExcelData.Select(i => i.Year2021).ToListAsync();
+            //list.Select(i=>JsonSerializer.Deserialize<Business.Dtos.YearOfExamDto>(i.Year2021));
             var q = list.GroupBy(x => x)
             .Select(g => new { Value = g.Key, Count = g.Count() })
             .OrderByDescending(x => x.Count);
