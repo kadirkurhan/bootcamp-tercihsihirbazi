@@ -115,8 +115,9 @@ namespace TercihSihirbazi.WebApi.Controllers
         [Authorize]
         [HttpGet]
         [Route("GetAppUserWithFavorites")]
-        public async Task<IActionResult> GetAppUserWithFavorites(string username)
+        public async Task<IActionResult> GetAppUserWithFavorites()
         {
+            var username = User.Claims.SingleOrDefault(i => i.Type == System.Security.Claims.ClaimTypes.Name).Value;
             var user = await _appUserService.GetAppUserWithFavorites(username);
             return Ok(user);
         }
@@ -131,13 +132,14 @@ namespace TercihSihirbazi.WebApi.Controllers
             var user = await _appUserService.FindByUserName(User.Claims.SingleOrDefault(i => i.Type == System.Security.Claims.ClaimTypes.Name).Value);
             // ui halledildiğinde alltan devam edilecek username parametresi kaldırılacak..
             //var user = await _appUserService.FindByUserName(User.Identity.Name);
-
+            var dbdata = await _excelDataService.GetAll();
+            var findedId = dbdata.Where(i => i.ProgramKodu == id).Select(i => i.Id).FirstOrDefault();
             TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
 
             ProfileFavoriteDto AddedfavoriteDto = new ProfileFavoriteDto()
             {
                 AppUserId = user.Id,
-                DetailObjectId = id
+                DetailObjectId = findedId
             };
 
             await dbcontext.AppUserFavorites.AddAsync(_mapper.Map<AppUserFavorites>(AddedfavoriteDto));
@@ -148,14 +150,16 @@ namespace TercihSihirbazi.WebApi.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         [Route("DeleteFavoriteAsMember")]
-        public async Task<IActionResult> DeleteFavoriteAsMember(int id, string username)
+        public async Task<IActionResult> DeleteFavoriteAsMember(int id)
         {
             Functions functions = new Functions();
-            var user = await _appUserService.FindByUserName(username);
+            var user = await _appUserService.FindByUserName(User.Claims.SingleOrDefault(i => i.Type == System.Security.Claims.ClaimTypes.Name).Value);
             // ui halledildiğinde alltan devam edilecek username parametresi kaldırılacak..
             //var user = await _appUserService.FindByUserName(User.Identity.Name);
-
+            var exceldb = await _excelDataService.GetAll();
+            var findedId = exceldb.Where(i => i.ProgramKodu == id).Select(i => i.Id).FirstOrDefault();
             TercihSihirbaziContext dbcontext = new TercihSihirbaziContext();
 
             ProfileFavoriteDto AddedfavoriteDto = new ProfileFavoriteDto()
@@ -163,9 +167,9 @@ namespace TercihSihirbazi.WebApi.Controllers
                 AppUserId = user.Id,
                 DetailObjectId = id
             };
-            var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == user.Id && i.DetailObjectId == id).FirstOrDefaultAsync();
+            var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == user.Id && i.DetailObjectId == findedId).FirstOrDefaultAsync();
             dbcontext.AppUserFavorites.Remove(result);
-            await dbcontext.SaveChangesAsync();
+            dbcontext.SaveChanges();
             //var result = await dbcontext.AppUserFavorites.Where(i => i.AppUserId == user.Id).Select(i => i.DetailObjectId).ToListAsync();
             return Ok(result.DetailObjectId);
 
@@ -177,8 +181,8 @@ namespace TercihSihirbazi.WebApi.Controllers
         {
             using var context = new TercihSihirbaziContext();
 
-
-            var list = await context.AppUserFavorites.Select(i => i.DetailObjectId).ToListAsync();
+            //var list = await context.AppUserFavorites.Select(i => i.DetailObjectId).ToListAsync();
+            var list = await context.AppUserFavorites.Include("Favorited").Select(i => i.Favorited.ProgramAdi).ToListAsync();
             var q = list.GroupBy(x => x)
             .Select(g => new { Value = g.Key, Count = g.Count() })
             .OrderByDescending(x => x.Count);
@@ -212,11 +216,18 @@ namespace TercihSihirbazi.WebApi.Controllers
                 {
                     list = await context.ExcelData.Where(i => i.PuanTuru == filter).ToListAsync();
                 }
+                else
+                {
+                    list = await context.ExcelData.ToListAsync();
+
+                }
             }
-            else if (filter == null)
+            else
             {
                 list = await context.ExcelData.ToListAsync();
+
             }
+
 
             var q = list.GroupBy(x => x.ProgramAdi)
             .Select(g => new { Value = g.Key, Count = g.Sum(x => x.Yerlesen) })
