@@ -27,6 +27,8 @@ namespace TercihSihirbazi.Business.Concrete
                 YearOfExamListDto objectList = new();
                 List<int> genericList = new();
                 List<int> YerlesenList = new();
+                List<int> TavanList = new();
+                List<int> TabanList = new();
 
                 //objectList.genericList.Add(item);
                 if (item.Year2021 != null)
@@ -84,13 +86,73 @@ namespace TercihSihirbazi.Business.Concrete
                         dict["yerlesen"] = YerlesenList;
                     }
                 }
+
+                // Taban
+                if (item.Year2021 != null)
+                {
+                    sonuc = JsonSerializer.Deserialize<YearOfExamDto>(item.Year2021);
+                    TabanList.Add(sonuc.EnKucukPuan);
+                    if (!dict.ContainsKey("EnKucukPuan"))
+                    {
+                        dict.Add("EnKucukPuan", TabanList);
+                    }
+                    else
+                    {
+                        dict["EnKucukPuan"] = TabanList;
+                    }
+                }
+                if (item.Year2022 != null)
+                {
+                    sonuc = JsonSerializer.Deserialize<YearOfExamDto>(item.Year2022);
+                    TabanList.Add(sonuc.EnKucukPuan);
+                    if (!dict.ContainsKey("EnKucukPuan"))
+                    {
+                        dict.Add("EnKucukPuan", TabanList);
+                    }
+                    else
+                    {
+                        dict["EnKucukPuan"] = TabanList;
+                    }
+                }
+
+                // Tavan
+                if (item.Year2021 != null)
+                {
+                    sonuc = JsonSerializer.Deserialize<YearOfExamDto>(item.Year2021);
+                    TavanList.Add(sonuc.EnBuyukPuan);
+                    if (!dict.ContainsKey("EnBuyukPuan"))
+                    {
+                        dict.Add("EnBuyukPuan", TavanList);
+                    }
+                    else
+                    {
+                        dict["EnBuyukPuan"] = TavanList;
+                    }
+                }
+                if (item.Year2022 != null)
+                {
+                    sonuc = JsonSerializer.Deserialize<YearOfExamDto>(item.Year2022);
+                    TavanList.Add(sonuc.EnBuyukPuan);
+                    if (!dict.ContainsKey("EnBuyukPuan"))
+                    {
+                        dict.Add("EnBuyukPuan", TavanList);
+                    }
+                    else
+                    {
+                        dict["EnBuyukPuan"] = TavanList;
+                    }
+                }
                 //objectList.GenelKontenjan.AddRange(genericList);
 
                 //List<int> genelKontenjan = objectList.GenelKontenjan;
                 //List<int> genelKontenjan = genericList;
                 objectList.GenelKontenjan = genericList;
                 objectList.Yerlesen = YerlesenList;
-
+                item.TabanList = JsonSerializer.Serialize(TabanList);
+                item.TabanList.Substring(1, item.TabanList.Length - 2);
+                item.TavanList = JsonSerializer.Serialize(TavanList);
+                item.TavanList.Substring(1, item.TavanList.Length - 2);
+                Console.WriteLine(item.TavanList);
                 item.Year2018 = JsonSerializer.Serialize(objectList);
             }
             //var deserialized = JsonSerializer.Deserialize<DetailObject>(Kontenjan);

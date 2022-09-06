@@ -24,6 +24,8 @@ namespace TercihSihirbazi.Entities.Concrete
         public string Year2021 { get; set; }
         public string Year2022 { get; set; }
         public string Year2023 { get; set; }
+        public string TabanList { get; set; }
+        public string TavanList { get; set; }
 
     }
 
