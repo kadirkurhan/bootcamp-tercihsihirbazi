@@ -20,7 +20,7 @@ namespace TercihSihirbazi.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ExcelData(int page = 1, int recordPerPage = 3)
+        public async Task<IActionResult> ExcelData(int page = 1, int recordPerPage = 1000)
         {
             List<DetailObject> result = await _excelDataService.GetAll();
             result = await _excelDataService.KontenjanMapping(result.Skip(page).Take(recordPerPage).ToList());
